@@ -2,6 +2,8 @@ import express from "express";
 import * as color from "colors";
 import cors from "cors";
 import morgan from "morgan";
+import {config} from "@repo/config"
+import appRoutes from "./routes/api/v1/index"
 
 const app = express();
 
@@ -28,7 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("dev"));
 
-app.listen(3030, (err) => {
+app.use("/",appRoutes);
+
+app.listen(config.port, (err) => {
   if (err) {
     console.log(color.bgRed("Something went wrong while starting the server"));
     return;
