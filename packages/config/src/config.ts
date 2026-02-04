@@ -5,4 +5,5 @@ dotenv.config();
 export const config = {
   port: process.env.PORT || 3030,
   dbUrl : process.env.DB_URL,
+  geminiApiKey : process.env.GEMINI_API_KEY,
 };
