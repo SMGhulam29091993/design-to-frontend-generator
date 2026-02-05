@@ -4,8 +4,11 @@ import cors from 'cors';
 import morgan from 'morgan';
 import { config } from '@repo/config';
 import appRoutes from './routes/api/v1/index';
+import db from './db/mongoose';
 
 const app = express();
+
+db;
 
 const allowOrigins = [
   'http://localhost:5173',

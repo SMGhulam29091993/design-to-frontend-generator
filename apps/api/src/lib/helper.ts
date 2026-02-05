@@ -1,3 +1,4 @@
+import { config } from '@repo/config';
 import axios from 'axios';
 import { Response } from 'express';
 
@@ -22,7 +23,7 @@ export const getFigmaFile = async (fileKey: string) => {
     `https://api.figma.com/v1/files/${fileKey}`,
     {
       headers: {
-        'X-Figma-Token': process.env.FIGMA_TOKEN!,
+        'X-Figma-Token': config.figmaPAT,
       },
     }
   );
