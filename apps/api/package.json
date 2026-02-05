@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
+    "@repo/zod": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier": "workspace:*",
     "@repo/typescript-config": "workspace:*",

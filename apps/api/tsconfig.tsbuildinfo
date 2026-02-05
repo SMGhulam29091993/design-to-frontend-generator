@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/prisma.config.ts","./src/lib/helper.ts","./src/routes/api/v1/index.ts","./src/services/gemini.service.ts"],"version":"5.9.3"}
+{"root":["./src/index.ts","./src/prisma.config.ts","./src/controllers/generate.controller.ts","./src/lib/helper.ts","./src/routes/api/v1/index.ts","./src/services/gemini.service.ts"],"version":"5.9.3"}
