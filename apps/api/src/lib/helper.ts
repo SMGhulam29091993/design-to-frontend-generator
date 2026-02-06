@@ -19,7 +19,8 @@ export const sendResponse = <T>(
 };
 
 export const getFigmaFile = async (fileKey: string) => {
-  const res = await axios.get(
+  try {
+    const res = await axios.get(
     `https://api.figma.com/v1/files/${fileKey}`,
     {
       headers: {
@@ -29,6 +30,9 @@ export const getFigmaFile = async (fileKey: string) => {
   );
 
   return res.data.document;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export function extractFileKey(url: string) {
@@ -50,3 +54,11 @@ export const parseToUISchema = (figmaDoc: any) => {
       })),
   };
 };
+
+//to transform gemini response from markdown to javascript
+export function stripCodeFences(code: string): string {
+  return code
+    .replace(/^```[a-zA-Z]*\n/, "")
+    .replace(/```$/, "")
+    .trim();
+}

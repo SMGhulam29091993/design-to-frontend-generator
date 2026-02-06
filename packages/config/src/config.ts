@@ -11,5 +11,7 @@ export const config = {
   port: process.env.PORT || 3030,
   dbUrl : process.env.DB_URL,
   geminiApiKey : process.env.GEMINI_API_KEY,
-  figmaPAT : process.env.FIGMA_PAT
+  figmaPAT : process.env.FIGMA_PAT,
+  clerkPublishableKey : process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+  clerkSecretKey : process.env.CLERK_SECRET_KEY,
 };

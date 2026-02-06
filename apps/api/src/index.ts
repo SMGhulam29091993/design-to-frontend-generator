@@ -11,8 +11,8 @@ const app = express();
 db;
 
 const allowOrigins = [
-  'http://localhost:5173',
-  'http://127.0.0.1:5173',
+  'http://localhost:3000',
+  'http://172.16.0.165:3000',
 ];
 
 const corsOptions = {
